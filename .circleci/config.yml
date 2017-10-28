@@ -2,10 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: crowdworks/dep:latest
+      - image: miseyu/dep:latest
         environment:
           GOPATH: /go
-    working_directory: /go/src/github.com/crowdworks/ecs-goploy
+    working_directory: /go/src/github.com/miseyu/ecs-goploy
     steps:
       - checkout
       - run:

@@ -102,9 +102,7 @@ func (s *Service) UpdateService(service *ecs.Service, taskDefinition *ecs.TaskDe
 	if *newService.DesiredCount <= 0 {
 		return nil
 	}
-	ctx, cancel := context.WithTimeout(context.Background(), s.Timeout)
-	defer cancel()
-	return s.waitUpdating(ctx, taskDefinition)
+	return nil
 }
 
 // waitUpdating waits the new task definition is deployed.
