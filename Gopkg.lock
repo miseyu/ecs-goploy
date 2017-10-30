@@ -26,6 +26,12 @@
   version = "0.2.2"
 
 [[projects]]
+  name = "github.com/miseyu/ecs-goploy"
+  packages = ["cmd","deploy"]
+  revision = "ba94425d9d6103c178ce73ebb8bd20cfd255f14a"
+  version = "0.4.0"
+
+[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
@@ -46,6 +52,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "199a9f17fe3ec74d3f60dc6aae98c417480f8d38ddbbd6190de1da19a1ec53b4"
+  inputs-digest = "2d86fbc7da0795bf2f80389dfbea21d449463c27f1aea72e0f670f4d871113f9"
   solver-name = "gps-cdcl"
   solver-version = 1
