@@ -84,8 +84,7 @@ func (t *Task) RunTask(taskDefinition *ecs.TaskDefinition) ([]*ecs.Task, error) 
 	defer cancel()
 
 	containerOverride := &ecs.ContainerOverride{
-		Command: t.Command,
-		Name:    aws.String(t.Name),
+		Name: aws.String(t.Name),
 	}
 
 	override := &ecs.TaskOverride{
@@ -105,10 +104,6 @@ func (t *Task) RunTask(taskDefinition *ecs.TaskDefinition) ([]*ecs.Task, error) 
 	}
 	log.Printf("[INFO] Running tasks: %+v\n", resp.Tasks)
 
-	err = t.waitRunning(ctx, resp.Tasks)
-	if err != nil {
-		return resp.Tasks, err
-	}
 	return resp.Tasks, nil
 }
 
