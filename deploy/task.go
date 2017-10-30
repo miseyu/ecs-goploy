@@ -102,7 +102,6 @@ func (t *Task) RunTask(taskDefinition *ecs.TaskDefinition) ([]*ecs.Task, error) 
 	if err != nil {
 		return nil, err
 	}
-	log.Printf("[INFO] Running tasks: %+v\n", resp.Tasks)
 
 	return resp.Tasks, nil
 }
